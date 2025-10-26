@@ -1,5 +1,6 @@
 import { connect, RenderFieldExtensionCtx } from 'datocms-plugin-sdk';
-import { render } from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom/client'; // <-- note '/client'
 
 const COLORS = [
   { name: 'Red', value: '#E74C3C' },
@@ -40,6 +41,7 @@ function ColorList({ ctx }: { ctx: RenderFieldExtensionCtx }) {
 
 connect({
   renderFieldExtension(_, ctx) {
-    render(<ColorList ctx={ctx} />, document.getElementById('root'));
+    const root = ReactDOM.createRoot(document.getElementById('root')!);
+    root.render(<ColorList ctx={ctx} />);
   }
 });
