@@ -2,6 +2,7 @@
   "name": "Color List Selector",
   "description": "Dropdown list with color swatches for DatoCMS fields.",
   "entryPoint": "src/index.tsx",
-  "fieldTypes": ["string"],
-  "mainColor": "#6B5B95"
+  "fieldTypes": ["string", "text"],
+  "mainColor": "#6B5B95",
+  "parameters": []
 }
